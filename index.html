@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Mahjong Solitaire 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p></p>
+  <!-- 🔥 stabilny panel sterowania -->
+  <div id="controlPanel">
+    <select id="layoutSelect">
+      <option value="tower">Tower</option>
+	  <option value="cross">Cross</option>
+      <option value="traditional">Traditional</option>
+      <option value="turtle">Turtle</option>  
+    </select>
+
+    <button id="btnNew">Nowa gra</button>
+    <button id="btnHint">Podpowiedź</button>
+	<button id="btnUndo">Cofnij ruch</button>
+	<button id="btnShuffle">Wymieszaj</button>
+  </div>
+  <p></p>
+
+    <!-- 🔥 status osobno, nie rusza panelu -->
+  <div id="status"></div>
+  <p></p>
+
+  <canvas id="gameCanvas" width="1024" height="680"></canvas>
+
+  <p style = "font-family: Caveat; color: #BDBDBD"> © 2026 | LS | design kafelków: www.codeinferno.com</p>
+
+  <script src="game.js"></script>
+</body>
+</html>

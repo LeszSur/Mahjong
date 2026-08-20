@@ -1,0 +1,87 @@
+body {
+  background: #0b0c10;
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+canvas {
+  background: #1f2833;
+  border: 1px solid #45a29e;
+  display: block;
+  margin: 0 auto;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+button {
+  width: 180px;              /* 🔥 taka sama szerokość jak select */
+  background: #c5c6c7;
+  border: 3px solid #0b0c10;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #0b0c10;
+}
+
+button:hover {
+  background: #66fcf1;
+}
+
+button:active {
+  background: #45a29e;
+  color: white;
+  border-color: #1f2833;
+}
+
+#layoutSelect {
+  appearance: none;           /* 🔥 usuwa natywny wygląd selecta */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  width: 220px;               /* 🔥 dokładnie jak przycisk */
+  background: #c5c6c7;
+  border: 3px solid #0b0c10;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #0b0c10;
+  transition: 0.2s;
+
+  /* usuwa dodatkowy padding przeglądarki */
+  box-sizing: border-box;
+}
+
+/* hover jak przycisk */
+#layoutSelect:hover {
+  background: #66fcf1;
+}
+
+/* aktywny wybór (zielone podświetlenie) */
+#layoutSelect:focus {
+  background: #45a29e;
+  color: white;
+  border-color: #1f2833;
+  outline: none;
+}
+
+/* 🔥 strzałka selecta — stylowana, nie powiększa szerokości */
+#layoutSelect {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+}
