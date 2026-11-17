@@ -183,6 +183,120 @@ const towerLayout = [
   	{ x: 3.5, y: 5.5, z: 4}
 ];
 
+const tower2Layout = [
+
+  // --- WARSTWA 0 (82) ---
+  // główna baza 6×8
+  ...Array.from({ length: 6 }, (_, x) => 
+    Array.from({ length: 8 }, (_, y) => ({ x: x + 1 , y: y + 2, z: 0 }))
+  ).flat(),
+  
+   //  --- lewa strona ----
+
+    { x: -1, y: 2, z: 0 }, { x: -2, y: 2, z: 0 },
+    { x: -1, y: 9, z: 0 }, { x: -2, y: 9, z: 0 },
+	{ x: 0, y: 3, z: 0 }, { x: 0, y: 4, z: 0 }, { x: 0, y: 5, z: 0 }, { x: 0, y: 6, z: 0 }, { x: 0, y: 7, z: 0 }, { x: 0, y: 8, z: 0 },
+	{ x: -1, y: 4, z: 0 }, { x: -1, y: 5, z: 0 }, { x: -1, y: 6, z: 0 }, { x: -1, y: 7, z: 0 },
+    { x: -2, y: 5, z: 0 }, { x: -2, y: 6, z: 0 },
+	{ x: -3, y: 5.5, z: 0},
+	
+	   //  --- prawa strona ----
+    { x: 8, y: 2, z: 0 }, { x: 9, y: 2, z: 0 },
+    { x: 8, y: 9, z: 0 }, { x: 9, y: 9, z: 0 },
+	{ x: 7, y: 3, z: 0 }, { x: 7, y: 4, z: 0 }, { x: 7, y: 5, z: 0 }, { x: 7, y: 6, z: 0 }, { x: 7, y: 7, z: 0 }, { x: 7, y: 8, z: 0 },
+	{ x: 8, y: 4, z: 0 }, { x: 8, y: 5, z: 0 }, { x: 8, y: 6, z: 0 }, { x: 8, y: 7, z: 0 },
+    { x: 9, y: 5, z: 0 }, { x: 9, y: 6, z: 0 },
+	{ x: 10, y: 5.5, z: 0},
+	
+	  // --- WARSTWA 1 (36) ---
+  ...Array.from({ length: 4 }, (_, x) =>
+    Array.from({ length: 6 }, (_, y) => ({ x: x + 2, y: y + 3, z: 1 }))
+  ).flat(),
+  	{ x: 1, y: 4, z: 1 }, { x: 1, y: 5, z: 1 }, { x: 1, y: 6, z: 1 }, { x: 1, y: 7, z: 1 },
+  	{ x: 6, y: 4, z: 1 }, { x: 6, y: 5, z: 1 }, { x: 6, y: 6, z: 1 }, { x: 6, y: 7, z: 1 },
+        { x: 0, y: 5, z: 1 }, { x: 0, y: 6, z: 1 },
+        { x: 7, y: 5, z: 1 }, { x: 7, y: 6, z: 1 },
+
+  // --- WARSTWA 2 (20) ---
+  ...Array.from({ length: 2 }, (_, x) =>
+    Array.from({ length: 6 }, (_, y) => ({ x: x + 3, y: y + 3, z: 2 }))
+  ).flat(),
+
+  ...Array.from({ length: 2 }, (_, x) =>
+    Array.from({ length: 2 }, (_, y) => ({ x: x + 1, y: y + 5, z: 2 }))
+  ).flat(),
+
+  ...Array.from({ length: 2 }, (_, x) =>
+    Array.from({ length: 2 }, (_, y) => ({ x: x + 5, y: y + 5, z: 2 }))
+  ).flat(),
+
+
+  // --- WARSTWA 3 (5) ---
+  	{ x: 2.5, y: 5.5, z: 3},
+  	{ x: 3.5, y: 5.5, z: 3},
+  	{ x: 4.5, y: 5.5, z: 3},
+  	{ x: 3.5, y: 4.5, z: 3},
+  	{ x: 3.5, y: 6.5, z: 3},
+  
+  // --- WARSTWA 4 (1) ---
+  	{ x: 3.5, y: 5.5, z: 4}
+];
+
+const iksLayout = [
+
+  // --- WARSTWA 0 (63) ---
+
+    { x: -3, y: 1, z: 0 }, { x: -2, y:1, z: 0 }, { x: -1, y: 1, z: 0 }, { x: 0, y:1, z: 0 }, { x: 1, y:1, z: 0 },
+	{ x: 3, y: 1, z: 0 }, { x: 4, y:1, z: 0 }, { x: 5, y: 1, z: 0 }, { x: 6, y:1, z: 0 }, { x: 7, y:1, z: 0 },
+	{ x: -2, y:2, z: 0 }, { x: -1, y: 2, z: 0 }, { x: 0, y:2, z: 0 },
+	{ x: 4, y:2, z: 0 }, { x: 5, y: 2, z: 0 }, { x: 6, y:2, z: 0 }, 
+	{ x: -1, y:3, z: 0 }, { x: 0, y: 3, z: 0 }, { x: 1, y:3, z: 0 },
+	{ x: 3, y:3, z: 0 }, { x: 4, y: 3, z: 0 }, { x: 5, y:3, z: 0 }, 
+	{ x: 0, y: 4, z: 0 }, { x: 1, y:4, z: 0 }, { x: 2, y: 4, z: 0 }, { x: 3, y:4, z: 0 }, { x: 4, y:4, z: 0 },
+	{ x: 1, y:5, z: 0 }, { x: 2, y: 5, z: 0 }, { x: 3, y:5, z: 0 },
+	{ x: 0, y: 6, z: 0 }, { x: 1, y:6, z: 0 }, { x: 2, y: 6, z: 0 }, { x: 3, y:6, z: 0 }, { x: 4, y:6, z: 0 },
+	{ x: 3, y:7, z: 0 }, { x: 4, y: 7, z: 0 }, { x: 5, y:7, z: 0 }, 
+	{ x: -1, y:7, z: 0 }, { x: 0, y: 7, z: 0 }, { x: 1, y:7, z: 0 },
+	{ x: 4, y:8, z: 0 }, { x: 5, y: 8, z: 0 }, { x: 6, y:8, z: 0 },
+	{ x: -2, y:8, z: 0 }, { x: -1, y: 8, z: 0 }, { x: 0, y:8, z: 0 },	
+	{ x: 3, y: 9, z: 0 }, { x: 4, y:9, z: 0 }, { x: 5, y: 9, z: 0 }, { x: 6, y:9, z: 0 }, { x: 7, y:9, z: 0 },
+	{ x: -3, y: 9, z: 0 }, { x: -2, y:9, z: 0 }, { x: -1, y: 9, z: 0 }, { x: 0, y:9, z: 0 }, { x: 1, y:9, z: 0 },
+	{ x: -5.5, y: 5, z: 0 }, { x: -3.5, y: 5, z: 0 }, { x: -1.5, y:5, z: 0 }, { x: 5.5, y: 5, z: 0 }, { x: 7.5, y:5, z: 0 }, { x: 9.5, y:5, z: 0 },
+	
+  // --- WARSTWA 1 (57) ---
+    { x: -3, y: 1, z: 1 }, { x: -2, y:1, z: 1 }, { x: -1, y: 1, z: 1 }, { x: 0, y:1, z: 1 }, { x: 1, y:1, z: 1 },
+	{ x: 3, y: 1, z: 1 }, { x: 4, y:1, z: 1 }, { x: 5, y: 1, z: 1 }, { x: 6, y:1, z: 1 }, { x: 7, y:1, z: 1 },
+	{ x: -2, y:2, z: 1 }, { x: -1, y: 2, z: 1 }, { x: 0, y:2, z: 1 },
+	{ x: 4, y:2, z: 1 }, { x: 5, y: 2, z: 1 }, { x: 6, y:2, z: 1 }, 
+	{ x: -1, y:3, z: 1 }, { x: 0, y: 3, z: 1 }, { x: 1, y:3, z: 1 },
+	{ x: 3, y:3, z: 1 }, { x: 4, y: 3, z: 1 }, { x: 5, y:3, z: 1 }, 
+	{ x: 0, y: 4, z: 1 }, { x: 1, y:4, z: 1 }, { x: 2, y: 4, z: 1 }, { x: 3, y:4, z: 1 }, { x: 4, y:4, z: 1 },
+	{ x: 1, y:5, z: 1 }, { x: 2, y: 5, z: 1 }, { x: 3, y:5, z: 1 },
+	{ x: 0, y: 6, z: 1 }, { x: 1, y:6, z: 1 }, { x: 2, y: 6, z: 1 }, { x: 3, y:6, z: 1 }, { x: 4, y:6, z: 1 },
+	{ x: 3, y:7, z: 1 }, { x: 4, y: 7, z: 1 }, { x: 5, y:7, z: 1 }, 
+	{ x: -1, y:7, z: 1 }, { x: 0, y: 7, z: 1 }, { x: 1, y:7, z: 1 },
+	{ x: 4, y:8, z: 1 }, { x: 5, y: 8, z: 1 }, { x: 6, y:8, z: 1 },
+	{ x: -2, y:8, z: 1 }, { x: -1, y: 8, z: 1 }, { x: 0, y:8, z: 1 },	
+	{ x: 3, y: 9, z: 1 }, { x: 4, y:9, z: 1 }, { x: 5, y: 9, z: 1 }, { x: 6, y:9, z: 1 }, { x: 7, y:9, z: 1 },
+	{ x: -3, y: 9, z: 1 }, { x: -2, y:9, z: 1 }, { x: -1, y: 9, z: 1 }, { x: 0, y:9, z: 1 }, { x: 1, y:9, z: 1 },
+
+
+  // --- WARSTWA 2 (23) ---
+    { x: -1, y: 2, z: 2 }, { x: 5, y: 2, z: 2 },
+    { x: 0, y: 3, z: 2 }, { x: 4, y: 3, z: 2 },
+	{ x: 1, y: 4, z: 2 }, { x: 2, y: 4, z: 2 }, { x: 3, y: 4, z: 2 },
+    { x: 1, y:5, z: 2 }, { x: 2, y: 5, z: 2 }, { x: 3, y:5, z: 2 },
+	{ x: 1, y: 6, z: 2 }, { x: 2, y: 6, z: 2 }, { x: 3, y: 6, z: 2 },
+    { x: 0, y: 7, z: 2 }, { x: 4, y: 7, z: 2 },
+	{ x: -1, y: 8, z: 2 }, { x: 5, y: 8, z: 2 },
+	{ x: 4, y:9, z: 2 }, { x: 5, y: 9, z: 2 }, { x: 6, y:9, z: 2 }, 
+	{ x: -2, y:9, z: 2 }, { x: -1, y: 9, z: 2 }, { x: 0, y:9, z: 2 },
+	
+  // --- WARSTWA 3 1) ---
+    { x: 2, y: 5, z: 3 },
+  
+];
+
 const crossLayout = [
   // --- WARSTWA 0 (70) ---
   // główna baza 6×7
@@ -271,7 +385,9 @@ const crossLayout = [
 const layoutConfig = {
   turtle: { ORIGIN_X: 190, ORIGIN_Y: 60 },
   traditional: { ORIGIN_X: 125, ORIGIN_Y: 60 },
+  iks: { ORIGIN_X: 370, ORIGIN_Y: -65 },
   tower: { ORIGIN_X: 300, ORIGIN_Y: -110 },
+  tower2: { ORIGIN_X: 300, ORIGIN_Y: -110 },
   cross: { ORIGIN_X: 370, ORIGIN_Y: -70 }
 };
 
@@ -281,9 +397,22 @@ let layout = towerLayout;
 const layouts = {
   turtle: turtleLayout,
   traditional: traditionalLayout,
+  iks: iksLayout,
   tower: towerLayout,
+  tower2: tower2Layout,
   cross: crossLayout
 };
+
+// layout z URL-a, np. ?layout=iks
+
+const params = new URLSearchParams(window.location.search);
+const layoutFromUrl = params.get("layout");
+
+if (layoutFromUrl && layouts[layoutFromUrl]) {
+  currentLayoutName = layoutFromUrl;
+}
+
+document.getElementById("layoutSelect").value = currentLayoutName;
 
 function newGame() {
   layout = layouts[currentLayoutName];
@@ -416,7 +545,31 @@ function drawTile(tile) {
   }
 
   // RYSOWANIE kafelka
-  ctx.drawImage(
+const cutTopLeft =
+    !hasLeftNeighbor(tile) &&
+    !hasTopNeighbor(tile);
+
+ctx.save();
+
+if (cutTopLeft) {
+
+    ctx.beginPath();
+
+    ctx.moveTo(drawX + 8, drawY);
+    ctx.lineTo(drawX + drawW, drawY);
+
+    ctx.lineTo(drawX + drawW, drawY + drawH);
+
+    ctx.lineTo(drawX, drawY + drawH);
+
+    ctx.lineTo(drawX, drawY + 8);
+
+    ctx.closePath();
+
+    ctx.clip();
+}
+
+ctx.drawImage(
     imgTiles,
     srcX,
     srcY,
@@ -426,25 +579,12 @@ function drawTile(tile) {
     drawY,
     drawW,
     drawH
-  );
+);
+
+ctx.restore();
   
 
   
-  // ⭐ GÓRNY LEWY RÓG — tło tylko gdy brak lewego i brak górnego
-  if (tile.z === 0 && !hasLeftNeighbor(tile) && !hasTopNeighbor(tile)) {
-    ctx.save();
-    ctx.beginPath();
-    ctx.moveTo(drawX, drawY);
-    ctx.lineTo(drawX + 8, drawY);
-    ctx.lineTo(drawX, drawY + 8);
-    ctx.closePath();
-    ctx.fillStyle = '#1f2833';
-    ctx.fill();
-    ctx.restore();
-  }
-  
-
-
 	// ⭐ PRAWY DOLNY RÓG — normalnie: brak prawego i brak dolnego
 
 	const cornerX = drawX + drawW;
@@ -470,17 +610,17 @@ function drawTile(tile) {
 
 	// ⭐ PRAWY DOLNY RÓG — wycinamy tylko jeśli nic go nie zasłania graficznie
 	
-	if (!hasBottomNeighbor(tile) && !isCornerCovered) {
-		ctx.save();
-		ctx.beginPath();
-		ctx.moveTo(drawX + drawW, drawY + drawH);
-		ctx.lineTo(drawX + drawW - 8, drawY + drawH);
-		ctx.lineTo(drawX + drawW, drawY + drawH - 8);
-		ctx.closePath();
-		ctx.fillStyle = '#1f2833';
-		ctx.fill();
-		ctx.restore();
-	}
+		if (!hasBottomNeighbor(tile) && !isCornerCovered) {
+			ctx.save();
+			ctx.beginPath();
+			ctx.moveTo(drawX + drawW, drawY + drawH);
+			ctx.lineTo(drawX + drawW - 8, drawY + drawH);
+			ctx.lineTo(drawX + drawW, drawY + drawH - 8);
+			ctx.closePath();
+			ctx.fillStyle = '#1f2833';
+			ctx.fill();
+			ctx.restore();
+		}
 
 
 
